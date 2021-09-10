@@ -3,6 +3,31 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Carga de empleado</h1>
+
+    <div class="form-group">
+        <form asp-action="Empleados" method="post">
+            <div class="form-group row">
+                <label for="nomyape">Nombre y apellido: </label>
+                <input type="text" name="nombre" id="nomyape" placeholder="Nombre y apellido" class="form-control" />
+            </div>
+            <div class="form-group row">
+                <label for="dni">DNI: </label>
+                <input type="text" name="dni" placeholder="Nro de DNI sin numeros" id="dni" class="form-control" />
+            </div>
+            <div class="form-group row">
+                <label for="fechaNac">Fecha nacimiento: </label>
+                <input type="date" name="fechaNac" value="" id="fechaNac" class="form-control" />
+            </div>
+            <div class="form-group row">
+                <label for="direccion">Direccion: </label>
+                <input type="text" name="direccion" id="direccion" value="" placeholder="Direccion" class="form-control" />
+            </div>
+            <div class="form-group row">
+                <label for="fechaIngr">Fecha ingreso: </label>
+                <input type="date" name="fechaIngr" value="" id="fechaIngr" class="form-control" />
+            </div>
+            <input type="submit" class="btn btn-primary" />
+        </form>
+    </div>
 </div>

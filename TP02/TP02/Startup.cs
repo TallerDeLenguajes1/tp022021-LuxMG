@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using NLog;
 
 namespace TP02
 {
@@ -23,6 +24,9 @@ namespace TP02
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // para inyectar NLog a todo el servicio
+            services.AddSingleton(NLog.LogManager.GetCurrentClassLogger());
+
             services.AddControllersWithViews();
         }
 
